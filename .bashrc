@@ -127,3 +127,6 @@ export PATH=/home/jamos/software/anaconda2/bin:$PATH
 #===================software links=======================
 alias xmind="/home/jamos/software/xmind/XMind_amd64/XMind &"
 alias tmux="TERM=screen-256color-bce tmux"
+
+#==================keyboard setting=====================
+setxkbmap -option "ctrl:nocaps"

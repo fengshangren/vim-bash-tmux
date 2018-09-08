@@ -17,7 +17,7 @@
  Plugin 'Lokaltog/vim-easymotion'
  Plugin 'Lokaltog/vim-powerline'
  Plugin 'fatih/vim-go'
- "Plugin 'bling/vim-airline'
+ Plugin 'bling/vim-airline'
 "--------------------------------------------------------------------------------------------
  
  call vundle#end()            " required
@@ -61,7 +61,7 @@
  inoremap <expr> <Up>       pumvisible()? "\<C-p>":"\<Up>"
  inoremap <expr> <PageDown>   pumvisible() ? '<PageDown><C-p><C-n>' : '<PageDown>'
  inoremap <expr> <PageUp>     pumvisible() ? '<PageUp><C-p><C-n>' : '<PageUp>'
- nnoremap <leader>l :YcmCompleter GoToDefinitionElseDeclaration<CR>
+ nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "-------------------------------------------------------------------------------------------
 "vim-go key map
@@ -77,6 +77,7 @@
  syntax enable
  syntax on
  set completeopt=longest,menu 
+ set completeopt-=preview
  set ruler
  set showcmd
  set number
@@ -97,7 +98,7 @@
  set hlsearch 
  set incsearch 
  set go-=T
- set completeopt=preview,menu
+ set completeopt=menu
  colorscheme molokai
  "inoremap { {<CR>}<ESC>O
  inoremap ' ''<ESC>i
@@ -158,8 +159,6 @@
  map <Leader>j <Plug>(easymotion-j)
  map <Leader>k <Plug>(easymotion-k)
  map <Leader>l <Plug>(easymotion-lineforward)
- map <Leader><leader>. <Plug>(easymotion-repeat)
-"------------------------------------------------------------------------------------------
 "
 "------------------------------------------------------------------------------------------
 "Function
@@ -173,5 +172,3 @@
 		return a:char 
 	endif 
  endfunction 
-"-2-
-

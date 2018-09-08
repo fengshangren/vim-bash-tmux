@@ -127,6 +127,9 @@ export PATH=/home/jamos/software/anaconda2/bin:$PATH
 #===================software links=======================
 alias xmind="/home/jamos/software/xmind/XMind_amd64/XMind &"
 alias tmux="TERM=screen-256color-bce tmux"
-
+alias cdw="cd /home/jamos/goWorkspace/src/"
+alias gitc="git_code.sh $(pwd)"
 #==================keyboard setting=====================
 setxkbmap -option "ctrl:nocaps"
+export http_proxy="socks5://127.0.0.1:1080"
+export http_proxys="socks5://127.0.0.1:1080"

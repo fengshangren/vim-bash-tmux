@@ -1,16 +1,20 @@
 #! /bin/bash
 
 #install something indeed
-#apt-get update
-#go get -u github.com/jstemmer/gotags
-#sudo apt-get install ctags -y
-#sudo apt-get install ack-grep -y
-#sudo apt-get install tmux -y
-#sudo apt-get install build-essential cmake -y
+sudo apt-get update
+sudo apt-get install build-essential cmake -y
+sudo apt-get install python-dev
+sudo apt-get install ctags -y
+sudo apt-get install ack-grep -y
 
-#cd ~/vim-bash-tmux/.vim/bundle/YouCompleteMe/
-#./install.py --clang-completer
-#./install.py --go-completer
+sudo apt-get install tmux -y
+sudo pip install powerline-status
+
+go get -u github.com/jstemmer/gotags
+
+cd ~/vim-bash-tmux/.vim/bundle/YouCompleteMe/
+./install.py --clang-completer
+./install.py --go-completer
 
 
 

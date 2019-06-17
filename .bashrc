@@ -116,20 +116,26 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export GOPATH=/home/jamos/goWorkspace
-export GOROOT=/home/jamos/software/go
+export GOPATH=/home/jamosf/goWorkspace
+export GOROOT=/usr/lib/go-1.9
 export GOBIN=$GOROOT/bin
-export liteide=/home/jamos/software/liteide/bin
+export liteide=/home/jamosf/software/liteide/bin
 export PATH=$PATH:$GOPATH:$GOROOT:$GOBIN:$liteide
 
-export PATH=/home/jamos/software/anaconda2/bin:$PATH
+export PATH=/home/jamosf/software/anaconda2/bin:$PATH
 
 #===================software links=======================
 alias xmind="/home/jamos/software/xmind/XMind_amd64/XMind &"
 alias tmux="TERM=screen-256color-bce tmux"
 alias cdw="cd /home/jamos/goWorkspace/src/"
 alias gitc="git_code.sh $(pwd)"
+#=======================proxy===========================
+if ! ps -ef | grep -q sslocal; then
+	sudo sslocal -c /etc/shadowsocks.json &
+	sudo /etc/init.d/privoxy start
+fi
+
 #==================keyboard setting=====================
 setxkbmap -option "ctrl:nocaps"
-export http_proxy="socks5://127.0.0.1:1080"
-export http_proxys="socks5://127.0.0.1:1080"
+export http_proxy="127.0.0.1:8118"
+export http_proxys="127.0.0.1:8118"
